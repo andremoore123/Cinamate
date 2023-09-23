@@ -34,7 +34,7 @@ class MovieRepository @Inject constructor(
 
             override fun shouldFetch(data: List<Movie>?): Boolean =
 //                data == null || data.isEmpty()
-                true // ganti dengan true jika ingin selalu mengambil data dari internet
+                false // ganti dengan true jika ingin selalu mengambil data dari internet
 
             override suspend fun createCall(): Flow<ApiResponse<List<MovieResponse>>> =
                 remoteDataSource.getListPopular()
@@ -56,7 +56,7 @@ class MovieRepository @Inject constructor(
 
             override fun shouldFetch(data: List<Movie>?): Boolean =
 //                data == null || data.isEmpty()
-                true // ganti dengan true jika ingin selalu mengambil data dari internet
+                false // ganti dengan true jika ingin selalu mengambil data dari internet
 
             override suspend fun createCall(): Flow<ApiResponse<List<MovieResponse>>> =
                 remoteDataSource.getListUpComing()
@@ -77,7 +77,7 @@ class MovieRepository @Inject constructor(
 
             override fun shouldFetch(data: List<Movie>?): Boolean =
 //                data == null || data.isEmpty()
-                true // ganti dengan true jika ingin selalu mengambil data dari internet
+                false // ganti dengan true jika ingin selalu mengambil data dari internet
 
             override suspend fun createCall(): Flow<ApiResponse<List<MovieResponse>>> =
                 remoteDataSource.getListTopRated()
@@ -98,7 +98,7 @@ class MovieRepository @Inject constructor(
 
             override fun shouldFetch(data: List<Movie>?): Boolean =
 //                data == null || data.isEmpty()
-                true // ganti dengan true jika ingin selalu mengambil data dari internet
+                false // ganti dengan true jika ingin selalu mengambil data dari internet
 
             override suspend fun createCall(): Flow<ApiResponse<List<MovieResponse>>> =
                 remoteDataSource.getListNowPlaying()

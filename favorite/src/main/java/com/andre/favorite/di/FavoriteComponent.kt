@@ -1,17 +1,18 @@
 package com.andre.favorite.di
 
-import com.andre.cinamate.di.AppModule
-import com.andre.cinamate.presentation.favorite.FavoriteFragment
+import android.content.Context
+import com.andre.cinamate.di.FavoriteModuleDependencies
+import com.andre.favorite.presentation.FavoriteFragment
+import dagger.BindsInstance
 import dagger.Component
 
-@Component(dependencies = [AppModule::class])
-interface FavoriteComponent {
-    @Component.Factory
-    interface Factory {
-        // Takes an instance of AppComponent when creating
-        // an instance of LoginComponent
-        fun create(appComponent: AppModule): FavoriteComponent
+@Component(dependencies = [FavoriteModuleDependencies::class])
+interface FavoriteComponent{
+    fun inject(fragment: FavoriteFragment)
+    @Component.Builder
+    interface Builder {
+        fun context(@BindsInstance context: Context): Builder
+        fun appDependencies(loginModuleDependencies: FavoriteModuleDependencies): Builder
+        fun build(): FavoriteComponent
     }
-
-    fun inject(activity: FavoriteFragment)
 }

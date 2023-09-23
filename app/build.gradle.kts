@@ -45,6 +45,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    dynamicFeatures += setOf(":favorite")
 
     buildFeatures {
         viewBinding = true

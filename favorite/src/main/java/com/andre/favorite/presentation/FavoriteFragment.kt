@@ -1,5 +1,6 @@
-package com.andre.cinamate.presentation.favorite
+package com.andre.favorite.presentation
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,21 +9,28 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.andre.cinamate.databinding.FragmentFavoriteBinding
+import com.andre.cinamate.di.FavoriteModuleDependencies
 import com.andre.cinamate.presentation.adapter.MovieAdapterHorizontal
 import com.andre.cinamate.presentation.detail.DetailMovieActivity
 import com.andre.core.domain.model.Movie
 import com.andre.core.util.ObjectDataMapper
+import com.andre.favorite.databinding.FragmentFavoriteBinding
+import com.andre.favorite.di.DaggerFavoriteComponent
+import com.andre.favorite.di.FavoriteComponent
+import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.EntryPointAccessors
+import javax.inject.Inject
 
-@AndroidEntryPoint
 class FavoriteFragment : Fragment() {
 
     companion object {
         fun newInstance() = FavoriteFragment()
     }
 
-    private val viewModel: FavoriteViewModel by viewModels()
+    @Inject lateinit var viewModel: FavoriteViewModel
+
+
     private lateinit var rvFavoriteAdapter: MovieAdapterHorizontal
 
     private var _binding: FragmentFavoriteBinding? = null
@@ -45,6 +53,20 @@ class FavoriteFragment : Fragment() {
             it.adapter = rvFavoriteAdapter
         }
         return (view)
+    }
+
+    override fun onAttach(context: Context) {
+        DaggerFavoriteComponent.builder()
+            .context(requireContext())
+            .appDependencies(
+                EntryPointAccessors.fromApplication(
+                    requireContext(),
+                    FavoriteModuleDependencies::class.java
+                )
+            )
+            .build()
+            .inject(this)
+        super.onAttach(context)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

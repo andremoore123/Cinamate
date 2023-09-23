@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
-        android:name="com.andre.cinamate.presentation.favorite.FavoriteFragment"
+        android:name="com.andre.favorite.presentation.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" >
         <action
