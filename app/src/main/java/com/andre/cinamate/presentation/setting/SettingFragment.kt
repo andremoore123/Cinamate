@@ -1,7 +1,6 @@
 package com.andre.cinamate.presentation.setting
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,7 +30,6 @@ class SettingFragment : Fragment() {
         }
 
         viewModel.getThemeSettings().observe(viewLifecycleOwner) { isDarkModeActive: Boolean ->
-            Log.d("DarkMode", isDarkModeActive.toString())
             if (isDarkModeActive) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 binding.darkModeSwitch.isChecked = true

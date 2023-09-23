@@ -12,12 +12,12 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.andre.core.data.Resource
 import com.andre.cinamate.databinding.FragmentHomeBinding
-import com.andre.core.domain.model.Movie
 import com.andre.cinamate.presentation.adapter.MovieAdapterNoScore
 import com.andre.cinamate.presentation.adapter.MovieAdapterScore
 import com.andre.cinamate.presentation.detail.DetailMovieActivity
+import com.andre.core.data.Resource
+import com.andre.core.domain.model.Movie
 import com.andre.core.util.ObjectDataMapper.EXTRA_MOVIE
 import dagger.hilt.android.AndroidEntryPoint
 

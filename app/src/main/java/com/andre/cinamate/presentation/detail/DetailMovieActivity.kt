@@ -6,8 +6,8 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import com.andre.cinamate.R
-import com.andre.core.domain.model.Movie
 import com.andre.cinamate.databinding.ActivityDetailMovieBinding
+import com.andre.core.domain.model.Movie
 import com.andre.core.util.ObjectDataMapper.EXTRA_MOVIE
 import com.andre.core.util.ObjectDataMapper.IMAGE_BASE_LINK
 import com.andre.core.util.ObjectDataMapper.extractYear

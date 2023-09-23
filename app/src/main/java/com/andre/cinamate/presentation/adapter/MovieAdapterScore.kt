@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.andre.core.domain.model.Movie
 import com.andre.cinamate.databinding.CardMovieScoreBinding
+import com.andre.core.domain.model.Movie
 import com.andre.core.util.MovieDiffCallback
 import com.andre.core.util.ObjectDataMapper
 
