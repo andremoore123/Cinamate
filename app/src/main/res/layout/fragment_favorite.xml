@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.favorite.FavoriteFragment">
+    tools:context="com.andre.cinamate.presentation.favorite.FavoriteFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -38,7 +38,6 @@
         android:layout_height="wrap_content"
         android:text="@string/label_empty_list"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:visibility="gone"/>
+        android:textStyle="bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

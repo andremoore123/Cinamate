@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.andre.cinamate.core.domain.usecase.MovieUseCase
-import com.andre.cinamate.util.preference.SettingPreferences
+import com.andre.core.domain.usecase.MovieUseCase
+import com.andre.core.util.preference.SettingPreferences
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

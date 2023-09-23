@@ -14,5 +14,6 @@
     <string name="favorite_film_label">Favorite Film</string>
     <string name="setting_label">Setting</string>
     <string name="dark_mode_label">Dark Mode</string>
+    <string name="title_favorite">Favorite</string>
 
 </resources>

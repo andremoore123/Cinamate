@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.andre.cinamate.core.domain.model.Movie
+import com.andre.core.domain.model.Movie
 import com.andre.cinamate.databinding.CardMovieNoScoreBinding
-import com.andre.cinamate.util.MovieDiffCallback
-import com.andre.cinamate.util.ObjectDataMapper.IMAGE_BASE_LINK
+import com.andre.core.util.MovieDiffCallback
+import com.andre.core.util.ObjectDataMapper.IMAGE_BASE_LINK
 
 class MovieAdapterNoScore(private val clickEvent: ((Movie) -> Unit) = {}) :
     ListAdapter<Movie, MovieAdapterNoScore.ViewHolder>(MovieDiffCallback()) {
