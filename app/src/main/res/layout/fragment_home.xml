@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".presentation.home.HomeFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="0dp"
+            android:layout_height="230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgTopRated"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/barbie_backdrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/labelUpComing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/label_up_coming"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+        <TextView
+            android:id="@+id/seeMoreUpComing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_see_more"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/labelUpComing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/labelUpComing" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUpComing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelUpComing" />
+
+        <TextView
+            android:id="@+id/labelTopRated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/label_top_rated"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/labelUpComing"
+            app:layout_constraintTop_toBottomOf="@+id/rvUpComing" />
+
+        <TextView
+            android:id="@+id/seeMoreTopRated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/label_see_more"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/labelTopRated"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/labelTopRated" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTopRated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelTopRated" />
+
+        <TextView
+            android:id="@+id/labelNowPlaying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/label_now_playing"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/labelUpComing"
+            app:layout_constraintTop_toBottomOf="@+id/rvTopRated" />
+
+        <TextView
+            android:id="@+id/seeMoreNowPlaying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/label_see_more"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/labelNowPlaying"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/labelNowPlaying" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNowPlaying"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelNowPlaying" />
+
+        <TextView
+            android:id="@+id/labelListPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/label_list_popular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/labelUpComing"
+            app:layout_constraintTop_toBottomOf="@+id/rvNowPlaying" />
+
+        <TextView
+            android:id="@+id/seeMoreListPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/label_see_more"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/labelListPopular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/labelListPopular" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListPopular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelListPopular" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/labelTopRated"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

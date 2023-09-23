@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Cinamate</string>
+    <string name="label_home">Home</string>
+    <string name="label_favorite">Favorite</string>
+    <string name="label_setting">Setting</string>
+    <string name="label_up_coming">Up Coming</string>
+    <string name="label_see_more">See More</string>
+    <string name="label_top_rated">Top Rated</string>
+    <string name="label_now_playing">Now Playing</string>
+    <string name="label_list_popular">Most Popular</string>
+    <string name="label_favorite_button">Favorite Button</string>
+    <string name="label_empty_list">Tidak Ada Item Favorite</string>
+    <string name="detail_movie_label">Detail Movie</string>
+    <string name="favorite_film_label">Favorite Film</string>
+    <string name="setting_label">Setting</string>
+    <string name="dark_mode_label">Dark Mode</string>
+
+</resources>
