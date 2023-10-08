@@ -17,7 +17,7 @@ jobs:
           distribution: 'zulu'
 
       - name: Grant execute permissions to Gradle wrapper
-        run: chmod +x ./gradlew
+        run: chmod +x gradlew
 
       # Run Build Project
       - name: Build gradle project
