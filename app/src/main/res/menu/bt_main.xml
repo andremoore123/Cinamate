@@ -3,20 +3,20 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:title="@string/label_home"
+        android:enabled="true"
         android:icon="@drawable/icon_home"
-        android:enabled="true"/>
+        android:title="@string/label_home" />
 
     <item
         android:id="@+id/favoriteFragment"
-        android:title="@string/label_favorite"
+        android:enabled="true"
         android:icon="@drawable/icon_favorite"
-        android:enabled="true"/>
+        android:title="@string/label_favorite" />
 
     <item
         android:id="@+id/settingFragment"
-        android:title="@string/label_setting"
+        android:enabled="true"
         android:icon="@drawable/icon_setting"
-        android:enabled="true"/>
+        android:title="@string/label_setting" />
 
 </menu>
