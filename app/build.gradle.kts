@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id ("kotlin-kapt")
-    id ("kotlin-parcelize")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
 
@@ -23,7 +23,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
     buildTypes {
@@ -35,7 +35,7 @@ android {
             )
         }
     }
-    packagingOptions{
+    packagingOptions {
         resources.excludes.add("META-INF/*")
     }
     compileOptions {

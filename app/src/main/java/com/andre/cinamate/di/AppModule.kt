@@ -21,6 +21,6 @@ abstract class AppModule {
 
 @EntryPoint
 @InstallIn(SingletonComponent::class)
-interface FavoriteModuleDependencies{
+interface FavoriteModuleDependencies {
     fun provideMovieUseCaseFavorite(): MovieInteractor
 }

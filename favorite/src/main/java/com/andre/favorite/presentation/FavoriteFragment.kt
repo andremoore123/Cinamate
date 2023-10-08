@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.andre.cinamate.di.FavoriteModuleDependencies
 import com.andre.cinamate.presentation.adapter.MovieAdapterHorizontal
@@ -16,9 +15,6 @@ import com.andre.core.domain.model.Movie
 import com.andre.core.util.ObjectDataMapper
 import com.andre.favorite.databinding.FragmentFavoriteBinding
 import com.andre.favorite.di.DaggerFavoriteComponent
-import com.andre.favorite.di.FavoriteComponent
-import dagger.hilt.EntryPoint
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
 import javax.inject.Inject
 
@@ -28,7 +24,8 @@ class FavoriteFragment : Fragment() {
         fun newInstance() = FavoriteFragment()
     }
 
-    @Inject lateinit var viewModel: FavoriteViewModel
+    @Inject
+    lateinit var viewModel: FavoriteViewModel
 
 
     private lateinit var rvFavoriteAdapter: MovieAdapterHorizontal
