@@ -22,8 +22,8 @@ jobs:
 
       # Run Build Project
       - name: Build gradle project
-        run: ./gradlew build
+        run: gradlew build
 
       # Create APK Debug
       - name: Build APK
-        run: ./gradlew assembleDebug
+        run: gradlew assembleDebug
