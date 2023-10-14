@@ -185,6 +185,11 @@ class HomeFragment : Fragment() {
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
     private fun onClickEvent(movie: Movie) {
         startActivity(
             Intent(context, DetailMovieActivity::class.java)
