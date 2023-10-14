@@ -120,4 +120,7 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.10")
+
+    implementation("net.zetetic:android-database-sqlcipher:4.4.0")
+    implementation("androidx.sqlite:sqlite-ktx:2.1.0")
 }

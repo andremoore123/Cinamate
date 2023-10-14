@@ -52,4 +52,7 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+
+    implementation("net.zetetic:android-database-sqlcipher:4.4.0")
+    implementation("androidx.sqlite:sqlite-ktx:2.1.0")
 }

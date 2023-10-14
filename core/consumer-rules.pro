@@ -2,7 +2,11 @@
 -keep,includedescriptorclasses class net.sqlcipher.** { *; }
 -keep,includedescriptorclasses interface net.sqlcipher.** { *; }
  
- 
+
+-keep class dagger.* { *; }
+-keep class androidx.viewbinding.** { *; }
+
+
 ##---------------Begin: proguard configuration for Gson ----------
 # Gson uses generic type information stored in a class file when working with fields. Proguard
 # removes such information by default, so configure it to keep all of it.
@@ -35,10 +39,17 @@
 # Retrofit does reflection on generic parameters. InnerClasses is required to use Signature and
 # EnclosingMethod is required to use InnerClasses.
 -keepattributes Signature, InnerClasses, EnclosingMethod
- 
+-dontnote retrofit2.Platform # Platform calls Class.forName on types which do not exist on Android to determine platform.
+
+
 # Retrofit does reflection on method and parameter annotations.
 -keepattributes RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
- 
+
+ # OkHttp 3
+ -keep class okhttp3.** { *; }
+ -keep interface okhttp3.** { *; }
+ -dontwarn okhttp3.**
+
 # Retain service method parameters when optimizing.
 -keepclassmembers,allowshrinking,allowobfuscation interface * {
 @retrofit2.http.* <methods>;
@@ -60,4 +71,14 @@
 -keep,allowobfuscation interface <1>
  
 -dontwarn kotlinx.**
+
+# Keep generic signature of Call, Response (R8 full mode strips signatures from non-kept items).
+ -keep,allowobfuscation,allowshrinking interface retrofit2.Call
+ -keep,allowobfuscation,allowshrinking class retrofit2.Response
+
+ # With R8 full mode generic signatures are stripped for classes that are not
+ # kept. Suspend functions are wrapped in continuations where the type argument
+ # is used.
+ -keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
+
  

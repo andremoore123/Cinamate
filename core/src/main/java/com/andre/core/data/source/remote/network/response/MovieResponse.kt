@@ -1,7 +1,9 @@
 package com.andre.core.data.source.remote.network.response
 
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
+@Keep
 data class MovieResponse(
     @SerializedName("id")
     val id: Int,
