@@ -53,12 +53,12 @@ class DetailMovieActivity : AppCompatActivity() {
     private fun setFavoriteButton(isFavorite: Boolean) {
         viewModel.isMovieFavorite(movie)
         if (isFavorite) {
-            favoriteButton.setImageResource(R.drawable.icon_favorite)
+            favoriteButton.setImageResource(R.drawable.baseline_favorite_24)
             favoriteButton.setOnClickListener {
                 viewModel.removeFromFavorite(movie)
             }
         } else {
-            favoriteButton.setImageResource(R.drawable.baseline_favorite_24)
+            favoriteButton.setImageResource(R.drawable.icon_favorite)
             favoriteButton.setOnClickListener {
                 viewModel.addToFavorite(movie)
             }

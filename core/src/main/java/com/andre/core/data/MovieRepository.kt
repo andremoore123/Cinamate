@@ -1,5 +1,6 @@
 package com.andre.core.data
 
+import android.util.Log
 import com.andre.core.data.source.local.LocalDataSource
 import com.andre.core.data.source.remote.RemoteDataSource
 import com.andre.core.data.source.remote.network.ApiResponse
@@ -49,6 +50,7 @@ class MovieRepository @Inject constructor(
         object : NetworkBoundResource<List<Movie>, List<MovieResponse>>() {
             override fun loadFromDB(): Flow<List<Movie>> {
                 return localDataSource.getUpComing().map {
+                    Log.d("MovieRepository", it.toString())
                     ObjectDataMapper.mapEntitiesToDomain(it)
                 }
             }

@@ -45,7 +45,8 @@ object ObjectDataMapper {
                 title = it.title,
                 voteAverage = it.voteAverage,
                 overview = it.overview,
-                releaseDate = it.releaseDate
+                releaseDate = it.releaseDate,
+                category = it.category
             )
         }
 
@@ -59,7 +60,8 @@ object ObjectDataMapper {
             title = input.title,
             voteAverage = input.voteAverage,
             overview = input.overview,
-            releaseDate = input.releaseDate
+            releaseDate = input.releaseDate,
+            category = input.category
         )
 
     fun extractYear(input: String): String {
