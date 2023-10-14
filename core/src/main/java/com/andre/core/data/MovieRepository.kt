@@ -50,7 +50,6 @@ class MovieRepository @Inject constructor(
         object : NetworkBoundResource<List<Movie>, List<MovieResponse>>() {
             override fun loadFromDB(): Flow<List<Movie>> {
                 return localDataSource.getUpComing().map {
-                    Log.d("MovieRepository", it.toString())
                     ObjectDataMapper.mapEntitiesToDomain(it)
                 }
             }
